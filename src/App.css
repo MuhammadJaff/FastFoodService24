@@ -1,10 +1,31 @@
-.inputEdits{
-    width: 30%;
-    height:1.2rem;
-    border: none;
-    /* box-shadow: 2px 3px 4px 5px rgb(25, 25, 26); */
-    
+* {
+  background-color: rgb(186, 235, 235);
+  margin: 0;
+  padding: 0;
 }
-/* .inputEdits:mouseover{
-    border: none;
-} */
+
+.mainBlock {
+  margin: 1rem 7rem;
+}
+.mainBlock .title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 1.5rem 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainBlock .fragment {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.mainBlock .fragment .imageBlock {
+  width: 15rem;
+}
+.mainBlock .fragment .imageBlock .imageItself {
+  width: 30rem;
+  border-radius: 7%;
+}
+.mainBlock .fragment .imageBlock :hover {
+  transform: scale(1.07);
+  transition: 0.7s ease-in;
+  opacity: 90%;
+}/*# sourceMappingURL=App.css.map */

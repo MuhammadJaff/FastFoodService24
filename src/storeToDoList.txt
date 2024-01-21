@@ -1,0 +1,31 @@
+<input onKeyDown={handleKey} 
+		value={inputValue} 
+		onChange={handleClick} 
+		className='inputEdits' 
+		placeholder='Type something and enter'
+		type='text'>
+</input>
+
+{array.map((elem)=>(
+	<h3 onDoubleClick={()=>deleteIt(elem)} key={elem.id}>{elem.value}</h3>
+))}
+
+const handleClick=(e)=>{
+		setInputValue(e.target.value);
+	}
+	const handleKey= (e)=>{
+		if(e.key === 'Enter'){
+			setToArray(inputValue);
+			setInputValue("");
+		}
+	}
+	const setToArray = (valueOf)=>{
+		const newArr = [...array,{value:valueOf,id:array.length,done:false}];
+		setArray(newArr);
+	}
+	const deleteIt = (e)=>{
+		const AnotherArray = array.filter((elem)=> elem !== e);
+		setArray(AnotherArray);	}
+
+        	const [inputValue,setInputValue] = useState("");
+	const [array,setArray] = useState([]);
