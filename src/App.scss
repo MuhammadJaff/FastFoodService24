@@ -28,14 +28,31 @@
                 border-radius: 7%;
                 
             }:hover{
-                transform: scale(1.07);
+                transform: scale(1.03);
                 // transform: rotateZ(1deg);
                 transition: .7s ease-in;
-                opacity: 90%;
+                opacity: 98%;
             }
         }
         .textBlock{
-            // -ms-flex-order: 1;
+            .buttonContainer {
+                display: flex;
+                // justify-content: space-evenly;
+                .button {
+                    padding: 10px 20px;
+                    background-color: #e8ce09; /* Green background color */
+                    color: white; /* White text color */
+                    text-align: center;
+                    text-decoration: none;
+                    // display: inline-block;
+                    font-family:Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1.2rem;
+                    color: black;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                }
+            }
         }
     }
 }

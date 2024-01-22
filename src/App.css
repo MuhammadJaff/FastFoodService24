@@ -25,7 +25,23 @@
   border-radius: 7%;
 }
 .mainBlock .fragment .imageBlock :hover {
-  transform: scale(1.07);
+  transform: scale(1.03);
   transition: 0.7s ease-in;
-  opacity: 90%;
+  opacity: 98%;
+}
+.mainBlock .fragment .textBlock .buttonContainer {
+  display: flex;
+}
+.mainBlock .fragment .textBlock .buttonContainer .button {
+  padding: 10px 20px;
+  background-color: #e8ce09; /* Green background color */
+  color: white; /* White text color */
+  text-align: center;
+  text-decoration: none;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+  color: black;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }/*# sourceMappingURL=App.css.map */
