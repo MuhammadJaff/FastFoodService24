@@ -1,6 +1,7 @@
 import React from 'react'
 import Data from './Data';
 import { useState } from 'react';
+import Popup from './PopUp';
 
 function Menu() {
     const [data,setData] = useState(Data);
@@ -26,11 +27,15 @@ function Menu() {
         setData(changeItem);
         console.log(e.total);
     }
+    const seeTheList = ()=>{
+        console.log("Clicked");
+    }
 
   return (
     <div>
         <section className='mainBlock'>
 				<h1 className='title'>Fast Food Service24</h1>
+                <Popup/>
 					{data.map((elem)=>(
 						<div className="fragment" key={elem.id}>
 							<div className='imageBlock'>
@@ -39,6 +44,7 @@ function Menu() {
 							<div className='textBlock'>
 								<h3>{elem.name}</h3>
 								<p>{elem.price}</p>
+                                <p>Total:{elem.total}</p>
                                 <h3>{elem.count}</h3>
                                 
                                 <div className='buttonContainer'>
