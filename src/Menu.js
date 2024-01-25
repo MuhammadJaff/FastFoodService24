@@ -35,7 +35,7 @@ function Menu() {
     <div>
         <section className='mainBlock'>
 				<h1 className='title'>Fast Food Service24</h1>
-                <Popup/>
+                <Popup allData = {data}/>
 					{data.map((elem)=>(
 						<div className="fragment" key={elem.id}>
 							<div className='imageBlock'>
