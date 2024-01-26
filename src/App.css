@@ -16,7 +16,8 @@
 .mainBlock .Bucket {
   position: fixed;
   top: 1rem;
-  right: 5rem;
+  right: 3rem;
+  font-size: 150%;
 }
 .mainBlock .fragment {
   display: grid;

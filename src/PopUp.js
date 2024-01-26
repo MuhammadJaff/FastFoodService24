@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Popup = ({allData}) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -21,8 +23,7 @@ const Popup = ({allData}) => {
 
   return (
     <div>
-      <img onClick={openPopup} className='Bucket' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADfUlEQVR4nO2ZW0gVQRjH/17I6OJhvm+OaSlRmt2Jsh6KIoiiIro8SQRBRnajIgLJeih8kIzyJYIeIkq0MqJCKnrqoSR6iJ4KuhC4s5omFBVBD0WemMN3DkuIpu3uOQv9YDg7uzv/b/57vp2d2QX+k31sANADIDFE+QzgMYAdAHKQpbwfxsSfpS1bzXR7OukOctx2ejKAWgDf5LztyELWixlrYt0w5+4WI88RcQoAfBQzsxFx2sTIPkScWjHSjohTKUb6s3X0Gs2QPQsR55oY2YuIs0eMXEfEmSVG+v7fJ1lE+wjnaEGUTj+M7MsCI+/8MDLHc5+EzRWJfdIPMfsw/CCCMxEeE2QWPgBgul+iN8WInRWHxU6J+dBP0QMiehXh0RnEmmieiPYiHGZISn0FMM5P4RyZPCYkSNA0SqyLQYjfEvFdqR1GqWqHudkQNRnmTQ7RQUN0OllXarmr1FpDdN4wN/TH4xOM1isM0Vl7PAHkWQ23sJAcolOeOLmyirWxlgVh5JCIt6aNMDf0aF2ZrhO1JoB8T/1usrNKzU8aZW6U/ce7tF4o200OUYcnzlqJ8yaoadECCdDtNWKIzhjmo91EpdaIITpm66+YJzpEBxzmFod5VaqN/ScM86W3FRUFhmiNq/VWe84gM4l6BESOZx1fnjbCvNjEYsr+E9ZIb3FxXOp5dtumlEN0oot5m21j08jRetFLYIxhfmK03m2Yn1odADEA3wH8AlCGALkjRnb+ZWpddbVeaZjrXaIa++sw1xmtq1yiKaaoaHqyMN+25gHsF/0HCJjDEiiZCiYeL39fUpIeHl2l5iU8ed03adJ4V6l1XUotTR5nXmKIVtvixGLT0oaVmiubz0S/OmgjC4d4wfevzBXtTwDGImByJZANmL6iPtEsuucREh0S0L7o9ot8mV1b3SqExBEJeNlHzc2i+QIhUiVBuwIYDY8gRPLkO4rfq8CfAIoRMnd9NjEA4BwyQJ104AIizhIx8hoRJ18WPQn5yhVpOsRIDSLOLjHyCBGn0DNdaQIwVYbmSLIFwA8fh+FHmTSz0UcjPwCUZMpIi3TCPiSnSLk3zHeV60O0sR9hM0Jq1mo7k6LMs7YYjE9DtPmCDJF6npSOoFNfR9EmcFLvu+5Jx2y5L/tu+tgmcCo9b1e8xaZPhY9tEAY2129Iythir+pwHRpNG/wGcTfTffNEbTMAAAAASUVORK5CYII="></img>
-
+      <FontAwesomeIcon className='Bucket' onClick={openPopup} icon={faCartShopping} />
       {isPopupOpen && (
         <div className="popup-overlay">
           <div className="popup-content">
