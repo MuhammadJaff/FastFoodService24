@@ -3,16 +3,21 @@ import React, { useState } from 'react';
 const Popup = ({allData}) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [data,setData] = useState([]);
-  
-  // const filtered=[];
+
   const openPopup = () => {
     setPopupOpen(true);
     setData([...allData]);
+    
   };
 
-  const closePopup = () => {
+  let closePopup = () => {
     setPopupOpen(false);
   };
+  let totalAmount =0;
+    data.map(item=>{
+     item.total>0 && (totalAmount += item.total);
+       return null;
+     })
 
   return (
     <div>
@@ -23,23 +28,23 @@ const Popup = ({allData}) => {
           <div className="popup-content">
             <span className="close-btn" onClick={closePopup}>&times;</span>
             <p>Foods you selected to order are:</p>
-            <p>Here the selected order should be mapped</p>
+            
             {data.map((item)=>{
               if(item.count > 0){
-                // let total = total + item.total;
-                // So, we need to calculate the total price and put to the end, just it, then idk
+
                 return (
                   <div key={item.id}>
                     <p>{item.name}: {item.count}</p>
-                    {/* {item === data[data.length-1] && total} */}
                   </div>
                 )
               }
             })
-          }
+            }
+            <br></br>
+          <h3>{totalAmount >0 ? "Total is: " + totalAmount:"No purchase yet"}</h3>
           </div>
         </div>
-      )}    
+      )}
     </div>
   );
 };
