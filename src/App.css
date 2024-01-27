@@ -9,9 +9,16 @@
 }
 .mainBlock .title {
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 3rem;
   margin: 1.5rem 0;
+  color: rgb(246, 134, 54);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainBlock .titlePoem {
+  text-align: center;
+  color: rgb(229, 19, 215);
+  margin: -1.9rem 0 3rem;
+  font-size: 1.2rem;
 }
 .mainBlock .Bucket {
   position: fixed;
@@ -21,27 +28,35 @@
 }
 .mainBlock .fragment {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
 }
 .mainBlock .fragment .imageBlock {
-  width: 15rem;
+  height: auto;
 }
 .mainBlock .fragment .imageBlock .imageItself {
   width: 30rem;
   border-radius: 7%;
 }
-.mainBlock .fragment .imageBlock :hover {
+.mainBlock .fragment .imageBlock .imageItself:hover {
   transform: scale(1.03);
   transition: 0.7s ease-in;
   opacity: 98%;
 }
-.mainBlock .fragment .textBlock .buttonContainer {
+.mainBlock .fragment .imageBlock .textBlock {
+  margin: 1rem 1.5rem;
+}
+.mainBlock .fragment .imageBlock .textBlock .NameOfIt {
+  font-weight: 800;
+  color: rgb(246, 134, 54);
+}
+.mainBlock .fragment .imageBlock .textBlock .buttonContainer {
   display: flex;
 }
-.mainBlock .fragment .textBlock .buttonContainer .button {
+.mainBlock .fragment .imageBlock .textBlock .buttonContainer .button {
   padding: 10px 20px;
-  background-color: #e8ce09; /* Green background color */
-  color: white; /* White text color */
+  background-color: #e8ce09;
+  color: white;
   text-align: center;
   text-decoration: none;
   font-family: Georgia, Times, "Times New Roman", serif;

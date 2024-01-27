@@ -35,25 +35,27 @@ function Menu() {
     <div>
         <section className='mainBlock'>
 				<h1 className='title'>Fast Food Service24</h1>
+                <p className='titlePoem'><i>We say, eat less fast food, whenever you do, choose us!</i></p>
                 <Popup allData = {data}/>
+                <div className="fragment" >
 					{data.map((elem)=>(
-						<div className="fragment" key={elem.id}>
-							<div className='imageBlock'>
+							<div className='imageBlock' key={elem.id}>
 								<img className='imageItself' src={elem.image}/>
-							</div>
-							<div className='textBlock'>
-								<h3>{elem.name}</h3>
-								<p>{elem.price}</p>
-                                <p>Total:{elem.total}</p>
-                                <h3>{elem.count}</h3>
-                                
-                                <div className='buttonContainer'>
-                                    <button className='button' onClick={()=>AddOne(elem)}>buy +</button>
-                                    <button className='button' onClick={()=>RemoveOne(elem)}> -</button>
+							
+                                <div className='textBlock'>
+                                    <h3 className='NameOfIt'>{elem.name}</h3>
+                                    <p><b>Price:</b>{elem.price}</p>
+                                    <p><b>Total:</b>{elem.total}</p>
+                                    <h3>{elem.count}</h3>
+                                    
+                                    <div className='buttonContainer'>
+                                        <button className='button' onClick={()=>AddOne(elem)}>buy +</button>
+                                        <button className='button' onClick={()=>RemoveOne(elem)}> -</button>
+                                    </div>
                                 </div>
-							</div>
-						</div>
+                            </div>
 					))}
+                    </div>
 			</section>
     </div>
   )

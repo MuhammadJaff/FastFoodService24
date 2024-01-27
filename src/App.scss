@@ -7,47 +7,57 @@
     margin: 1rem 7rem;
     .title{
         text-align: center;
-        font-size: 2.3rem;
-        margin:1.5rem 0;
+        font-size: 3rem;
+        margin:1.5rem 0 ;
+        color:rgb(246, 134, 54);
         font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
+    .titlePoem{
+        text-align: center;
+        color: rgb(229, 19, 215);
+        margin: -1.9rem 0 3rem;
+        font-size: 1.2rem;
+    }
     .Bucket{
-           // position: ;
         position:fixed;
         top: 1rem;
         right: 3rem;
         font-size: 150%;
-        // width: 2rem;
-        // height: 2rem;
       
     }
     
     .fragment{
         display: grid;
-        grid-template-columns: 45% 55%;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
         .imageBlock{
-            width: 15rem;
+            height: auto;
             .imageItself{
                 width: 30rem;
                 border-radius: 7%;
                 
-            }:hover{
+            }
+            .imageItself:hover{
                 transform: scale(1.03);
                 transition: .7s ease-in;
                 opacity: 98%;
             }
-        }
         .textBlock{
+            margin: 1rem 1.5rem;
+            
+            .NameOfIt{
+                font-weight: 800;
+                color: rgb(246, 134, 54);
+            }
             .buttonContainer {
                 display: flex;
-                // justify-content: space-evenly;
+                
                 .button {
                     padding: 10px 20px;
-                    background-color: #e8ce09; /* Green background color */
-                    color: white; /* White text color */
+                    background-color: #e8ce09; 
+                    color: white; 
                     text-align: center;
                     text-decoration: none;
-                    // display: inline-block;
                     font-family:Georgia, Times, 'Times New Roman', serif;
                     font-size: 1.2rem;
                     color: black;
@@ -57,6 +67,7 @@
                 }
             }
         }
+    }
     }
 }
 
